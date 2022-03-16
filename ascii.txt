@@ -1,0 +1,32 @@
+$ git checkout -- portrait.txt
+$ git add portrait.txt
+$ git commit -m "Add eyebrows to portrait"
+[master a291241] Add eyebrows to portrait
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+$ git add house.txt tree.txt portrait.txt
+$ git commit -m "change dates"
+[master b8724b3] change dates
+ 3 files changed, 19 insertions(+), 2 deletions(-)
+ create mode 100644 house.txt
+$ git add .
+$ git reset house.txt
+Unstaged changes after reset:
+M       house.txt
+$ git status
+On branch master
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+        modified:   portrait.txt
+        modified:   tree.txt
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+        modified:   house.txt
+
+$ git commit -m "artistname"
+[master 8eda721] artistname
+ 2 files changed, 3 insertions(+), 1 deletion(-)
+$ 
